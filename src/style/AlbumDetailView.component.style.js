@@ -21,6 +21,11 @@ import { StyleSheet } from 'react-native';
         borderRadius : 30, 
     },
 
+    imageView: {
+        width: 250,
+        height: 250,
+    },
+
     textStyle: {  
         fontSize: 23,  
         textAlign: 'center', 

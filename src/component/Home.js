@@ -74,7 +74,7 @@ export default class HomeScreen extends Component {
                 data={ this.state.dataSource }
                 ItemSeparatorComponent = {this.FlatListItemSeparator}
                 renderItem={({ item }) => <View style={styles.listRowContainer}>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('DetailViewScreen', {
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('ThumbnailViewScreen', {
                       albumID: item.id,
                     })} style={styles.listRow}>
                     <View style={styles.listTextNavVIew}>
