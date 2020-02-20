@@ -22,12 +22,12 @@ FNDA:0,(anonymous_2)
 DA:8,1
 DA:14,3
 DA:15,3
-DA:16,0
-DA:17,0
-DA:20,0
+DA:16,3
+DA:17,3
+DA:20,3
 DA:28,0
 LF:7
-LH:3
+LH:6
 BRF:0
 BRH:0
 end_of_record

@@ -17,7 +17,7 @@ import { StyleSheet } from 'react-native';
         justifyContent: "center",
         backgroundColor: '#dedede',
         margin: 30,
-        marginTop: 100,
+        marginTop: 20,
         borderRadius : 30, 
     },
 
