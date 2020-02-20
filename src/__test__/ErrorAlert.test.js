@@ -5,15 +5,15 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { configure } from 'enzyme';
 import ErrorAlert from '../component/ErrorAlert';
+
 import Adapter from 'enzyme-adapter-react-16';
-import renderer from 'react-test-renderer';
 
 
 configure({ adapter: new Adapter() });
 
 
-describe('MyComponent', () => {
-  it('should render my component', () => {
+describe('ErrorAlert', () => {
+  it('should render ErrorAlert component', () => {
     const wrapper = shallow(<ErrorAlert />);
   });
 

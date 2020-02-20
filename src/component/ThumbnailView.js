@@ -16,7 +16,7 @@ export default class HomeScreen extends Component {
 
     // For to Navigation header
     static navigationOptions = () => ({
-      headerTitle: 'Album List',
+      headerTitle: 'Album Information',
     });
 
     constructor(props) {

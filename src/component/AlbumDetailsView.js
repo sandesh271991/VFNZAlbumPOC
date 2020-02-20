@@ -6,7 +6,7 @@ import styles from '../style/AlbumDetailView.component.style';
 
 export default class DetailView extends React.Component {
     static navigationOptions = {
-      title: 'Album Detail',
+      title: 'Album Details',
     };
 
     render() {
@@ -26,7 +26,7 @@ export default class DetailView extends React.Component {
                     <Text style={styles.textStyle}>{albumTitle}</Text>
                     <Button mode="contained"
                         onPress={() => this.props.navigation.navigate('HomeScreen', { goBackToHome, })}
-                        style={styles.buttonStyle}>
+                        style={styles.buttonStyle} testID='HomeButton'>
                         HOME
                     </Button>
                 </View>

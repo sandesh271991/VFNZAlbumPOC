@@ -1,5 +1,5 @@
 import {
-  FlatList, Text, View, TouchableOpacity,
+   Text, View, TouchableOpacity, FlatList
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { ActivityIndicator } from 'react-native-paper';
@@ -44,8 +44,7 @@ export default class HomeScreen extends Component {
           }
         })
         .catch(err => {
-          this.setState({isLoading: false, apiLoadingError: true}),
-            console.log('netwoek error')
+          this.setState({isLoading: false, apiLoadingError: true})
         }); 
     }
 

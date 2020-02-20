@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MyComponent should render initial layout 1`] = `
+exports[`ErrorAlert should render initial layout 1`] = `
 Array [
   <React.Fragment>
     <View
