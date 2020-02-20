@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyComponent should render initial layout 1`] = `
+Array [
+  <React.Fragment>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f76f6a",
+            "borderColor": "red",
+            "borderRadius": 10,
+            "borderWidth": 2,
+            "padding": 10,
+          }
+        }
+      >
+        <withTheme(Text)
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 7,
+              "color": "white",
+              "fontSize": 25,
+              "overflow": "hidden",
+              "padding": 10,
+              "textAlign": "left",
+            }
+          }
+        >
+          Something went wrong
+        </withTheme(Text)>
+        <withTheme(Text)
+          style={
+            Object {
+              "alignItems": "center",
+              "borderRadius": 7,
+              "color": "white",
+              "fontSize": 18,
+              "overflow": "hidden",
+              "padding": 10,
+              "textAlign": "center",
+            }
+          }
+        >
+          Please check network connectivity
+        </withTheme(Text)>
+      </View>
+    </View>
+  </React.Fragment>,
+]
+`;

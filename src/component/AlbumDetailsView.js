@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { View, Image } from 'react-native';
 import { Button, Provider, Text } from 'react-native-paper';
 import React from 'react';
@@ -11,10 +10,9 @@ export default class DetailView extends React.Component {
     };
 
     render() {
-      // eslint-disable-next-line no-lone-blocks
       { /* Using the navigation prop we can get the value passed from the previous screen */ }
       const { navigation } = this.props;
-      const albumTitle = navigation.getParam('albumTitle', 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/sample_img.png');
+      const albumTitle = navigation.getParam('albumTitle', 'Default data');
       const albumImg = navigation.getParam('albumImg', 'some default value');
       const goBackToHome = () => this.props.navigation.goBack(this.props.navigation.state.key);
 

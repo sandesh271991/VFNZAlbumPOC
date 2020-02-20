@@ -6,34 +6,28 @@ import { ActivityIndicator, Provider } from 'react-native-paper';
 import React, { Component } from 'react';
 import axios from 'axios';
 import styles from '../style/ThumbnailView.component.style';
-import AlbumDetails from './AlbumDetailsView'
+import ErrorAlert from '../component/ErrorAlert';
+import * as myConstant from '../common/Constants';
 
 
 
 export default class HomeScreen extends Component {
   _isMounted = false;
 
-
     // For to Navigation header
     static navigationOptions = () => ({
       headerTitle: 'Album List',
     });
-
-    state = {
-
-      fname: "nsmae",
-      sname: "",
-      result: "loading"
-  }
 
     constructor(props) {
       super(props);
 
       this.state = {
         isLoading: true,
+        apiLoadingError: false,
+
       };
     }
-
 
     getAlbums() {
       this._isMounted = true;
@@ -41,9 +35,7 @@ export default class HomeScreen extends Component {
       const albumId = navigation.getParam('albumID', 'no data');
       axios
         .get(
-
-          `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`
-
+          myConstant.API + `photos?albumId=${albumId}`, {timeout: myConstant.TIMEOUT} 
         )
         .then((response) => {
           if (this._isMounted) {
@@ -55,7 +47,9 @@ export default class HomeScreen extends Component {
             });
           }
         })
-        .catch((error) => this.setState({ error, isLoading: false }));
+        .catch(err => {
+          this.setState({isLoading: false, apiLoadingError: true})
+        }); 
     }
 
     componentWillUnmount() {
@@ -75,11 +69,15 @@ export default class HomeScreen extends Component {
           );
         }
 
+        if (this.state.apiLoadingError) {
+          return (
+            <ErrorAlert />
+          );
+        }
 
         return (
           <React.Fragment>
             <Provider>
-              {/* <AlbumDetails datapass={this.state.result} /> */}
               <View style={styles.listContainer} >
 
                 <FlatList

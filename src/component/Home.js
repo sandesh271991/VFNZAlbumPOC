@@ -1,11 +1,13 @@
 import {
-  FlatList, Text, View, Image, TouchableOpacity,
+  FlatList, Text, View, TouchableOpacity,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { ActivityIndicator } from 'react-native-paper';
 import React, { Component } from 'react';
 import axios from 'axios';
 import styles from '../style/Home.component.style';
+import ErrorAlert from '../component/ErrorAlert';
+import * as myConstant from '../common/Constants';
 
 
 export default class HomeScreen extends Component {
@@ -22,14 +24,15 @@ export default class HomeScreen extends Component {
 
       this.state = {
         isLoading: true,
+        apiLoadingError: false,
       };
     }
 
-
     getAlbums() {
       this._isMounted = true;
+      console.log()
       axios
-        .get('https://jsonplaceholder.typicode.com/albums')
+        .get(myConstant.API + 'albums', {timeout: myConstant.TIMEOUT} )
         .then((response) => {
           if (this._isMounted) {
             this.setState({
@@ -40,7 +43,10 @@ export default class HomeScreen extends Component {
             });
           }
         })
-        .catch((error) => this.setState({ error, isLoading: false }));
+        .catch(err => {
+          this.setState({isLoading: false, apiLoadingError: true}),
+            console.log('netwoek error')
+        }); 
     }
 
     componentWillUnmount() {
@@ -64,16 +70,20 @@ export default class HomeScreen extends Component {
           );
         }
 
+        if (this.state.apiLoadingError) {
+          return (
+            <ErrorAlert />
+          );
+        }
 
         return (
 
           <View style={styles.MainContainer} >
-
             <FlatList
-
                 data={ this.state.dataSource }
                 ItemSeparatorComponent = {this.FlatListItemSeparator}
                 renderItem={({ item }) => <View style={styles.listRowContainer}>
+
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('ThumbnailViewScreen', {
                       albumID: item.id,
                     })} style={styles.listRow}>
@@ -82,11 +92,11 @@ export default class HomeScreen extends Component {
                       <Ionicons name='md-arrow-dropright' style={styles.detailArrow} />
                     </View>
                     </TouchableOpacity>
+
                 </View>
               }
                 keyExtractor = { (item, index) => index.toString() }
             />
-
           </View>
         );
       }

@@ -5,14 +5,14 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "serverless-bundle test"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.6",
     "axios": "^0.19.2",
     "expo": "~36.0.0",
     "react": "~16.9.0",
-    "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-gesture-handler": "^1.6.0",
     "react-native-paper": "^3.6.0",
@@ -22,9 +22,32 @@
     "react-navigation": "^4.1.1",
     "react-navigation-stack": "^2.1.1"
   },
-  "devDependencies": {
-    "babel-preset-expo": "~8.0.0",
-    "@babel/core": "^7.0.0"
+  "jest": {
+    "preset": "react-native",
+    "setupFilesAfterEnv": ["<rootDir>/jestSetup.js"],
+    "collectCoverageFrom": ["src/**/{!(ignore-me),}.js"]
   },
-  "private": true
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-preset-expo": "~8.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "react-dom": "^16.12.0"
+  },
+  "private": true,
+  "name": "vfnzalbumpoc",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandesh271991/VFNZAlbumPOC.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandesh271991/VFNZAlbumPOC/issues"
+  },
+  "homepage": "https://github.com/sandesh271991/VFNZAlbumPOC#readme",
+  "description": ""
 }
