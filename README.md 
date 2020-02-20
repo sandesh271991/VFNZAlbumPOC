@@ -1,0 +1,30 @@
+# React Native
+
+Album list app with react native
+
+## Requirements
+
+1. Xcode to run app on iOS simulator
+2. Android stuio to run on Android simulator
+
+## Quick start
+
+Get up and running with our Movies sample app:
+
+1. Once you have the repo cloned and met all the requirements above, start the
+packager that will transform your JS code on-the-fly:
+```
+npm install
+npm start
+```
+
+## Testing
+
+Run example app tests with code coverage:
+
+```
+npx jest --coverage;
+```
+
+
+

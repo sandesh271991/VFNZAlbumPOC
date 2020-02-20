@@ -3,14 +3,13 @@ import React, { Component } from 'react';
 import { shallow } from 'enzyme';
 import AlbumDetailsView from '../component/AlbumDetailsView';
 
-
 describe('Album Details Screen', () => {
 
   it('should render Album Details component', () => {
     const wrapper = shallow(
         <AlbumDetailsView navigation={{ getParam: jest.fn() }} />
     );
-});
+  });
 
   it('should render initial layout', () => {
   // when
@@ -22,7 +21,5 @@ describe('Album Details Screen', () => {
   it('should check if BackButton exists', () => {
     const wrapper = shallow(<AlbumDetailsView navigation={{ getParam: jest.fn() }} />);
     wrapper.findWhere(n => n.name() === 'Button' && n.prop('testID') === 'HomeButton')
-
   });
-
 });
