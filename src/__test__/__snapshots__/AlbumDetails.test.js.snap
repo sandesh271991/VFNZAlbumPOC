@@ -36,6 +36,7 @@ Array [
             }
             style={
               Object {
+                "backgroundColor": "black",
                 "height": 250,
                 "width": 250,
               }

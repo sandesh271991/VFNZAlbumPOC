@@ -24,6 +24,7 @@ import { StyleSheet } from 'react-native';
     imageView: {
         width: 250,
         height: 250,
+        backgroundColor: 'black',
     },
 
     textStyle: {  

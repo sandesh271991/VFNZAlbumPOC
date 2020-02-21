@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/23</span>
+                <span class='fraction'>0/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/22</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
@@ -150,16 +150,7 @@
 <a name='L91'></a><a href='#L91'>91</a>
 <a name='L92'></a><a href='#L92'>92</a>
 <a name='L93'></a><a href='#L93'>93</a>
-<a name='L94'></a><a href='#L94'>94</a>
-<a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a>
-<a name='L97'></a><a href='#L97'>97</a>
-<a name='L98'></a><a href='#L98'>98</a>
-<a name='L99'></a><a href='#L99'>99</a>
-<a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L94'></a><a href='#L94'>94</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,8 +162,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -196,10 +185,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,10 +192,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -237,6 +218,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -269,13 +251,11 @@ import { ActivityIndicator } from 'react-native-paper';
 import React, { Component } from 'react';
 import axios from 'axios';
 import styles from '../style/Home.component.style';
-import ErrorAlert from '../component/ErrorAlert';
+import ErrorAlert from '../common/ErrorAlert';
 import * as myConstant from '../common/Constants';
 &nbsp;
 &nbsp;
 export default class HomeScreen extends Component {
-  _isMounted = <span class="cstat-no" title="statement not covered" >false;</span>
-&nbsp;
 &nbsp;
     // For to Navigation header
     static navigationOptions = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span>
@@ -297,71 +277,64 @@ export default class HomeScreen extends Component {
 <span class="cstat-no" title="statement not covered" >      axios</span>
         .get(myConstant.API + 'albums', {timeout: myConstant.TIMEOUT} )
         .then(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; {
-<span class="cstat-no" title="statement not covered" >          if (this._isMounted) {</span>
 <span class="cstat-no" title="statement not covered" >            this.setState({</span>
               isLoading: false,
               dataSource: response.data,
-            }, <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-&nbsp;
             });
-          }
         })
         .catch(<span class="fstat-no" title="function not covered" >er</span>r =&gt; {
 <span class="cstat-no" title="statement not covered" >          this.setState({isLoading: false, apiLoadingError: true})</span>
         }); 
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    co</span>mponentWillUnmount() {
-<span class="cstat-no" title="statement not covered" >      this._isMounted = false;</span>
-    }
-&nbsp;
 <span class="fstat-no" title="function not covered" >    co</span>mponentDidMount() {
 <span class="cstat-no" title="statement not covered" >      this.getAlbums();</span>
     }
 &nbsp;
-      FlatListItemSeparator = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >          &lt;View style={styles.flatListItemSeparator} /&gt;</span>
-      )
+    FlatListItemSeparator = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; (</span>
+<span class="cstat-no" title="statement not covered" >        &lt;View style={styles.flatListItemSeparator} /&gt;</span>
+    )
 &nbsp;
-<span class="fstat-no" title="function not covered" >      re</span>nder() {
-<span class="cstat-no" title="statement not covered" >        if (this.state.isLoading) {</span>
-<span class="cstat-no" title="statement not covered" >          return (</span>
-            &lt;View style={{ flex: 1, paddingTop: 30 }}&gt;
-                &lt;ActivityIndicator animating={true} size='large' /&gt;
-            &lt;/View&gt;
-          );
-        }
-&nbsp;
-<span class="cstat-no" title="statement not covered" >        if (this.state.apiLoadingError) {</span>
-<span class="cstat-no" title="statement not covered" >          return (</span>
-            &lt;ErrorAlert /&gt;
-          );
-        }
-&nbsp;
+<span class="fstat-no" title="function not covered" >    re</span>nder() {
+<span class="cstat-no" title="statement not covered" >      if (this.state.isLoading) {</span>
 <span class="cstat-no" title="statement not covered" >        return (</span>
-&nbsp;
-          &lt;View style={styles.MainContainer} &gt;
-            &lt;FlatList
-                data={ this.state.dataSource }
-                ItemSeparatorComponent = {this.FlatListItemSeparator}
-                renderItem={<span class="fstat-no" title="function not covered" >({</span> item }) =&gt; <span class="cstat-no" title="statement not covered" >&lt;View style={styles.listRowContainer}&gt;</span>
-&nbsp;
-                    &lt;TouchableOpacity onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.navigation.navigate('ThumbnailViewScreen', {</span>
-                      albumID: item.id,
-                    })} style={styles.listRow}&gt;
-                    &lt;View style={styles.listTextNavVIew}&gt;
-                      &lt;Text style={styles.albumTitle}&gt; {item.title} &lt;/Text&gt;
-                      &lt;Ionicons name='md-arrow-dropright' style={styles.detailArrow} /&gt;
-                    &lt;/View&gt;
-                    &lt;/TouchableOpacity&gt;
-&nbsp;
-                &lt;/View&gt;
-              }
-                keyExtractor = { <span class="fstat-no" title="function not covered" >(i</span>tem, index) =&gt; <span class="cstat-no" title="statement not covered" >index.toString() </span>}
-            /&gt;
+          &lt;View style={{ flex: 1, paddingTop: 30 }}&gt;
+              &lt;ActivityIndicator animating={true} size='large' /&gt;
           &lt;/View&gt;
         );
       }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (this.state.apiLoadingError) {</span>
+<span class="cstat-no" title="statement not covered" >        return (</span>
+          &lt;ErrorAlert /&gt;
+        );
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return (</span>
+&nbsp;
+        &lt;View style={styles.MainContainer} &gt;
+          &lt;FlatList
+              data={ this.state.dataSource } 
+              testID='AlbumList'
+              ItemSeparatorComponent = {this.FlatListItemSeparator}
+              renderItem={<span class="fstat-no" title="function not covered" >({</span> item }) =&gt; <span class="cstat-no" title="statement not covered" >&lt;View style={styles.listRowContainer}&gt;</span>
+&nbsp;
+                  &lt;TouchableOpacity onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.navigation.navigate('ThumbnailViewScreen', {</span>
+                    albumID: item.id,
+                  })} style={styles.listRow}&gt;
+                  &lt;View style={styles.listTextNavVIew}&gt;
+                    &lt;Text style={styles.albumTitle}&gt; {item.title} &lt;/Text&gt;
+                    &lt;Ionicons name='md-arrow-dropright' style={styles.detailArrow} /&gt;
+                  &lt;/View&gt;
+                  &lt;/TouchableOpacity&gt;
+&nbsp;
+              &lt;/View&gt;
+            }
+              keyExtractor = { <span class="fstat-no" title="function not covered" >(i</span>tem, index) =&gt; <span class="cstat-no" title="statement not covered" >index.toString() </span>}
+          /&gt;
+        &lt;/View&gt;
+      );
+    }
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -370,7 +343,7 @@ export default class HomeScreen extends Component {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Feb 20 2020 16:40:23 GMT+0530 (India Standard Time)
+                at Fri Feb 21 2020 12:34:11 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
