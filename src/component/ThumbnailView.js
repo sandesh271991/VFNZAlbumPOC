@@ -68,6 +68,7 @@ export default class HomeScreen extends Component {
           <View style={styles.listContainer} >
 
             <FlatList
+                testID='flatlist'
                 data={ this.state.dataSource } numColumns={3}
                 renderItem={({ item }) => <View style={styles.listRowContainer}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('AlbumDetailsViewScreen', {

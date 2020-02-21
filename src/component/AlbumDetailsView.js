@@ -8,7 +8,7 @@ export default class DetailView extends React.Component {
     static navigationOptions = {
       title: 'Album Details',
     };
-
+    
     render() {
       { /* Using the navigation prop we can get the value passed from the previous screen */ }
       const { navigation } = this.props;
