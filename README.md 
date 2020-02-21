@@ -18,6 +18,10 @@ npm install
 npm start
 ```
 
+## API call
+For API call using axios
+we can use redux for more efficiaent API calling.  
+
 ## Testing
 
 Run example app tests with code coverage:
