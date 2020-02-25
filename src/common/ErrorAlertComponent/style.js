@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
 
-
     alertMainContainer: {
         flex: 1,
         alignItems: "center",
@@ -37,8 +36,4 @@ export default StyleSheet.create({
         borderRadius : 7,
         overflow: 'hidden',
     },  
-
-
-
-
 });

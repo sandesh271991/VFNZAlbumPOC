@@ -1,13 +1,14 @@
+import React, { Component } from 'react';
+import { ActivityIndicator } from 'react-native-paper';
 import {
    Text, View, TouchableOpacity, FlatList
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { ActivityIndicator } from 'react-native-paper';
-import React, { Component } from 'react';
 import axios from 'axios';
-import styles from '../style/Home.component.style';
-import ErrorAlert from '../common/ErrorAlert';
-import * as myConstant from '../common/Constants';
+import styles from '../HomeComponent/style';
+import ErrorAlert from '../../common/ErrorAlertComponent/errorAlert';
+import * as myConstant from '../../common/Constants';
+
 
 export default class HomeScreen extends Component {
 
@@ -22,6 +23,8 @@ export default class HomeScreen extends Component {
       this.state = {
         isLoading: true,
         apiLoadingError: false,
+        items: []
+
       };
     }
 
@@ -41,8 +44,9 @@ export default class HomeScreen extends Component {
         }); 
     }
 
-    componentDidMount() {
+    async componentDidMount() {
       this.getAlbums();
+     // await fetchInfo().then((items) => this.setState({ items }));
     }
 
     FlatListItemSeparator = () => (
@@ -66,9 +70,11 @@ export default class HomeScreen extends Component {
 
       return (
 
+        
         <View style={styles.MainContainer} >
+          
           <FlatList
-              data={ this.state.dataSource } 
+              data={ this.state.dataSource} 
               testID='AlbumList'
               ItemSeparatorComponent = {this.FlatListItemSeparator}
               renderItem={({ item }) => <View style={styles.listRowContainer}>

@@ -1,7 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-
  
   listContainer: {
     marginTop: 10,
@@ -19,7 +18,6 @@ export default StyleSheet.create({
     borderColor: '#56b6f6',
     borderWidth: 2,
     backgroundColor: '#e8effe',
-
   },
 
   listRow: {

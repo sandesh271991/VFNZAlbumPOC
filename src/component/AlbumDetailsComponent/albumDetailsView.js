@@ -1,14 +1,14 @@
+import React from 'react';
 import { View, Image } from 'react-native';
 import { Button, Provider, Text } from 'react-native-paper';
-import React from 'react';
-import styles from '../style/AlbumDetailView.component.style';
+import styles from '../AlbumDetailsComponent/style';
 
 
 export default class DetailView extends React.Component {
     static navigationOptions = {
       title: 'Album Details',
     };
-    
+
     render() {
       { /* Using the navigation prop we can get the value passed from the previous screen */ }
       const { navigation } = this.props;

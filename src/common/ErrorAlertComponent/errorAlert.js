@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
+import React from 'react';
 import { View } from 'react-native';
 import {  Text } from 'react-native-paper';
-import React from 'react';
-import styles from '../style/ErrorAlert.component.style';
+import styles from '../../common/ErrorAlertComponent/style';
 
 
 export default class ErrorAlert extends React.Component {

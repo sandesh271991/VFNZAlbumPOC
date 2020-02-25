@@ -1,12 +1,12 @@
+import React, { Component } from 'react';
 import {
   FlatList, Text, View, Image, TouchableOpacity,
 } from 'react-native';
 import { ActivityIndicator, Provider } from 'react-native-paper';
-import React, { Component } from 'react';
 import axios from 'axios';
-import styles from '../style/ThumbnailView.component.style';
-import ErrorAlert from '../common/ErrorAlert';
-import * as myConstant from '../common/Constants';
+import styles from '../ThumbnailComponent/style';
+import ErrorAlert from '../../common/ErrorAlertComponent/errorAlert';
+import * as myConstant from '../../common/Constants';
 
 export default class HomeScreen extends Component {
 
