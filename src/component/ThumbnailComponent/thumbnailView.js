@@ -6,7 +6,7 @@ import { ActivityIndicator, Provider } from 'react-native-paper';
 import axios from 'axios';
 import styles from '../ThumbnailComponent/style';
 import ErrorAlert from '../../common/ErrorAlertComponent/errorAlert';
-import * as myConstant from '../../common/Constants';
+import * as myConstant from '../../common/constants';
 
 export default class HomeScreen extends Component {
 

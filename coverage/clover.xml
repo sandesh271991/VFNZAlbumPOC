@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1582297442543" clover="3.2.0">
-  <project timestamp="1582297442543" name="All files">
-    <metrics statements="50" coveredstatements="18" conditionals="8" coveredconditionals="1" methods="28" coveredmethods="6" elements="86" coveredelements="25" complexity="0" loc="50" ncloc="50" packages="4" files="11" classes="11"/>
+<coverage generated="1582608776044" clover="3.2.0">
+  <project timestamp="1582608776045" name="All files">
+    <metrics statements="50" coveredstatements="18" conditionals="8" coveredconditionals="1" methods="28" coveredmethods="6" elements="86" coveredelements="25" complexity="0" loc="50" ncloc="50" packages="7" files="12" classes="12"/>
     <package name="__mock__">
       <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="axios.js" path="/Users/Sandesh/VFNZAlbumPOC/src/__mock__/axios.js">
@@ -16,20 +16,32 @@
       </file>
     </package>
     <package name="common">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Constants.js" path="/Users/Sandesh/VFNZAlbumPOC/src/common/Constants.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="constants.js" path="/Users/Sandesh/VFNZAlbumPOC/src/common/constants.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
       </file>
-      <file name="ErrorAlert.js" path="/Users/Sandesh/VFNZAlbumPOC/src/common/ErrorAlert.js">
+    </package>
+    <package name="common.ErrorAlertComponent">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="errorAlert.js" path="/Users/Sandesh/VFNZAlbumPOC/src/common/ErrorAlertComponent/errorAlert.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="11" count="2" type="stmt"/>
       </file>
+      <file name="style.js" path="/Users/Sandesh/VFNZAlbumPOC/src/common/ErrorAlertComponent/style.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
     </package>
     <package name="component">
-      <metrics statements="43" coveredstatements="15" conditionals="8" coveredconditionals="1" methods="24" coveredmethods="5"/>
-      <file name="AlbumDetailsView.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/AlbumDetailsView.js">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="API.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/API.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="component.AlbumDetailsComponent">
+      <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="albumDetailsView.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/AlbumDetailsComponent/albumDetailsView.js">
         <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="8" count="1" type="stmt"/>
         <line num="14" count="3" type="stmt"/>
@@ -39,29 +51,44 @@
         <line num="20" count="3" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
       </file>
-      <file name="Home.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/Home.js">
-        <metrics statements="19" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="0"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="61" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="87" count="0" type="stmt"/>
+      <file name="style.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/AlbumDetailsComponent/style.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="ThumbnailView.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/ThumbnailView.js">
+    </package>
+    <package name="component.HomeComponent">
+      <metrics statements="19" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <file name="home.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/HomeComponent/home.js">
+        <metrics statements="19" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
+      </file>
+      <file name="style.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/HomeComponent/style.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="component.ThumbnailComponent">
+      <metrics statements="17" coveredstatements="9" conditionals="4" coveredconditionals="1" methods="10" coveredmethods="4"/>
+      <file name="style.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/ThumbnailComponent/style.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="thumbnailView.js" path="/Users/Sandesh/VFNZAlbumPOC/src/component/ThumbnailComponent/thumbnailView.js">
         <metrics statements="17" coveredstatements="9" conditionals="4" coveredconditionals="1" methods="10" coveredmethods="4"/>
         <line num="14" count="1" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
@@ -80,21 +107,6 @@
         <line num="73" count="0" type="stmt"/>
         <line num="74" count="0" type="stmt"/>
         <line num="83" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="style">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="AlbumDetailView.component.style.js" path="/Users/Sandesh/VFNZAlbumPOC/src/style/AlbumDetailView.component.style.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="ErrorAlert.component.style.js" path="/Users/Sandesh/VFNZAlbumPOC/src/style/ErrorAlert.component.style.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="Home.component.style.js" path="/Users/Sandesh/VFNZAlbumPOC/src/style/Home.component.style.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="ThumbnailView.component.style.js" path="/Users/Sandesh/VFNZAlbumPOC/src/style/ThumbnailView.component.style.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
   </project>

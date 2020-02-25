@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'react-native';
 import { shallow } from 'enzyme';
-import __ThumbnailView from '../component/ThumbnailView';
+import __ThumbnailView from '../component/ThumbnailComponent/thumbnailView';
  
 
 

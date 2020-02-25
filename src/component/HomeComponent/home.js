@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
 import styles from '../HomeComponent/style';
 import ErrorAlert from '../../common/ErrorAlertComponent/errorAlert';
-import * as myConstant from '../../common/Constants';
+import * as myConstant from '../../common/constants';
 
 
 export default class HomeScreen extends Component {

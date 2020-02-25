@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'react-native';
 import { shallow } from 'enzyme';
-import __AlbumDetailsView from '../component/AlbumDetailsView';
+import __AlbumDetailsView from '../component/AlbumDetailsComponent/albumDetailsView';
 
 describe('Album Details Screen', () => {
 
